@@ -4,19 +4,6 @@ import {loadParks, useParks} from "./parks/ParkProvider.js"
 import { park } from "./parks/Park.js"
 
 
-
-
-// rendering one park
-
-// const displayPark = (whichPark) => {
-//     const displayArray = useParks().filter(singlePark => {
-//         if (singlePark.target.includes(whichPark)){
-//             return singlePark;
-//         }
-//     })
-//     parkList(displayArray);
-// }
-
 const displayPark = (whichPark) => {
     console.log(whichPark, useParks() )
     const displayArray = []
@@ -37,19 +24,6 @@ navElement.addEventListener("change", event => {
 	} 
         
 })
-
-
-// export const searchParkByName = (searchValue) => {
-//     const parkArray = []
-//      useParks().find((specificPark) => {
-//         if (specificPark.fullName === (searchValue)){
-//             parkArray.push(specificPark);
-//         }
-//     })
-//     parkList(parkArray);
-// }
-
-
 
 loadParks().then(() => {
     const foundParks = useParks();

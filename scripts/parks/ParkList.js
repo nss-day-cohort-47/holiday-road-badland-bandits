@@ -9,9 +9,8 @@ export const parkPreviewList = (previewArray) => {
     previewRender(previewArray)
 };
  
-//  dropdown select 
+
  const render = (parkData) => {
-//   debugger 
     const parkDisplay = document.querySelector("#park_options");
     let HTMLArray = parkData.map(parkNames => {
         return parkDropdown(parkNames);
@@ -21,7 +20,6 @@ export const parkPreviewList = (previewArray) => {
 };
 
 const previewRender = (parkData) => {
-    //   debugger 
         const parkDisplay = document.querySelector("#park_preview");
         let HTMLArray = parkData.map(parkNames => {
             return park(parkNames);
