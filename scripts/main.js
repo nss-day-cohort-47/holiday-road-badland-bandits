@@ -1,6 +1,7 @@
 import { settings } from "./Settings.js"
 import {parkList} from "./parks/ParkList.js"
-import {loadParks} from "./parks/ParkProvider.js"
+import {loadParks, useParks} from "./parks/ParkProvider.js"
+
 
 
 
@@ -18,6 +19,9 @@ export const searchParkByName = (searchValue) => {
 
 
 
-
-parkList();
+loadParks().then(() => {
+    const foundParks = useParks();
+    console.log(foundParks);
+    parkList(foundParks);
+})
 
