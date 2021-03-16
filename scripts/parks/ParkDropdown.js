@@ -1,5 +1,8 @@
+import { loadParks } from "./ParkProvider.js"
+
 export const parkDropdown = (parkObj) => {
-return ` 
+loadParks
+    return ` 
 <option> ${parkObj.fullName} </option>
 `
 }
