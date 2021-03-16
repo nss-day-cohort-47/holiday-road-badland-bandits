@@ -1,13 +1,17 @@
 import {park} from "./Park.js";
+import { parkDropdown } from "./ParkDropdown.js";
 
 export const parkList= (parkArray) => {
 render(parkArray)
 };
 
-const render = (parkData) => {
-    const parkDisplay= document.querySelector(".park_preview");
-    let HTMLArray = parkData.map(onePark => {
-        return park(onePark);
+ 
+//  dropdown select 
+ const render= (parkData) => {
+  debugger 
+    const parkDisplay= document.querySelector(".park_options");
+    let HTMLArray = parkData.map(parkNames => {
+        return parkDropdown(parkNames);
 
     })
     parkDisplay.innerHTML= HTMLArray.join("");
