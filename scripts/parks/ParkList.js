@@ -7,13 +7,13 @@ render(parkArray)
 
  
 //  dropdown select 
- const render= (parkData) => {
-  debugger 
-    const parkDisplay= document.querySelector(".park_options");
+ const render = (parkData) => {
+//   debugger 
+    const parkDisplay = document.querySelector(".park_options");
     let HTMLArray = parkData.map(parkNames => {
         return parkDropdown(parkNames);
 
     })
-    parkDisplay.innerHTML= HTMLArray.join("");
+    parkDisplay.innerHTML = HTMLArray.join("");
 };
 

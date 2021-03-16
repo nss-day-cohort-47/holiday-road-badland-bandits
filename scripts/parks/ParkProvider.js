@@ -9,8 +9,9 @@ export const useParks = () => {
 export const loadParks = () => {
     return fetch(`${settings.npsKey}`)
     .then(response => response.json())
-    .then(parsedResponse => {
-        return parsedResponse;
+    .then((parkArray) => {
+        apiParks = parkArray.data
+        return parkArray.data;
     })
    
 }
