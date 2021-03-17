@@ -20,23 +20,31 @@ const displayPark = (parkId) => {
     return displayArray;
 }
 
+
 const navElement = document.querySelector("nav")
 navElement.addEventListener("change", event => {
-	if (event.target.id === "park_options") {
-       const singlePark = displayPark(event.target.value)
+    if (event.target.id === "park_options") {
+        const singlePark = displayPark(event.target.value)
         console.log("show me this national park")
 		parkPreviewList(singlePark)
- loadWeather(singlePark.map(weatherObj =>{
-    return weatherObj.addresses[0].city;
-})).then(weather =>{
-    weatherCard(weather);
-    console.log(weather);
-
-});
-	} 
-        
+        loadWeather(singlePark.map(weatherObj =>{
+            return weatherObj.addresses[0].city;
+        })).then(weather =>{
+            weatherCard(weather);
+            console.log(weather);
+            
+        });
+    } 
+    
 })
 
+
+const previewElement = document.querySelector("#park_preview")
+previewElement.addEventListener("click", event => {
+    if(event.target.id === "container_details--park"){
+        console.log("park details")
+    }
+})
 
 loadParks().then(() => {
     const foundParks = useParks();
