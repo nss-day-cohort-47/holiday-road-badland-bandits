@@ -1,29 +1,14 @@
-import {eatery} from "./Eatery.js";
-import { EateryDropdown } from "./EateryDropdown.js";
 
-export const eateryList= (eateryArray) => {
-render(eateryArray)
-};
+import { eateryDropdown } from "./EateryDropdown.js";
 
-export const eateryPreviewList = (previewArray) => {
-    eatPreviewRender(previewArray)
-};
- 
 
- const eatRender = (eateryData) => {
+
+
+export const eateryList = (list) => { 
+    let eateryHTML = ""; 
     const eateryDisplay = document.querySelector("#eat_options");
-    let HTMLArray = parkData.map(parkNames => {
-        return parkDropdown(parkNames);
+    for (const eateryObj of list) { 
+        eateryHTML += eateryDropdown(eateryObj) }
+        eateryDisplay.innerHTML = eateryHTML;
+         }
 
-    })
-    parkDisplay.innerHTML = HTMLArray.join("");
-};
-
-const eatPreviewRender = (parkData) => {
-        const parkDisplay = document.querySelector("#park_preview");
-        let HTMLArray = parkData.map(parkNames => {
-            return park(parkNames);
-    
-        })
-        parkDisplay.innerHTML = HTMLArray.join("");
-    };

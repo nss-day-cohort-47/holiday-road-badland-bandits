@@ -1,8 +1,8 @@
-import { loadEatery } from "./EateryProvider.js"
+
 
 export const eateryDropdown = (eatObj) => {
-    loadEatery()
-    return ` <option value="${eatObj.id}">${eatObj.businessName}</option>
+
+    return ` <option value="${eatObj.businessName}">${eatObj.businessName}</option>
 `
 }
 

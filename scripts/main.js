@@ -5,6 +5,9 @@ import {loadWeather, useWeather} from "./weather/WeatherProvider.js"
 import {weatherCard} from "./weather/WeatherCard.js"
 import {useAttractions, loadAttractions} from "./attractions/AttractionProvider.js"
 import {attractionList} from "./attractions/AttractionList.js"
+import {useEatery, loadEatery} from "./eateries/EateryProvider.js"
+
+import {eateryList} from "./eateries/EateryList.js"
 // import { park } from "./parks/Park.js"
 
 
@@ -56,4 +59,9 @@ loadAttractions().then(()=>{
     const foundAttractions = useAttractions();
     console.log(foundAttractions);
     attractionList(foundAttractions);
+})
+loadEatery().then(()=>{
+    const foundEateries = useEatery();
+    console.log(foundEateries);
+    eateryList(foundEateries);
 })
