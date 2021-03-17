@@ -25,6 +25,6 @@ const previewRender = (parkData) => {
             return park(parkNames);
     
         })
-        parkDisplay.innerHTML = HTMLArray.join("");
+        parkDisplay.innerHTML += HTMLArray.join("");
     };
     
