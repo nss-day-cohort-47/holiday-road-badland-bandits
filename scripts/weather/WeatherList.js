@@ -1,8 +1,7 @@
-const render = (parkData) => {
-    const parkDisplay = document.querySelector("#park_options");
+const render = (weatherData) => {
+    const weatherDisplay = document.querySelector("#weather");
     // let HTMLArray = parkData.map(parkNames => {
     //     return parkDropdown(parkNames);
 
-    })
-    parkDisplay.innerHTML = HTMLArray.join("");
-};
+    }
+    weatherDisplay.innerHTML = HTMLArray.join("");

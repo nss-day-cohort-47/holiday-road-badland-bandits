@@ -35,7 +35,6 @@ navElement.addEventListener("change", event => {
         
 })
 
-// value for the targets option value
 
 loadParks().then(() => {
     const foundParks = useParks();
@@ -43,4 +42,3 @@ loadParks().then(() => {
     parkList(foundParks);
 })
 
-// might be better to set park id instead of name, dropdown value= park id, singlepark.id===whichpark, will handle getting all the park details. then for the load weather part we can take the event tatget value and 
