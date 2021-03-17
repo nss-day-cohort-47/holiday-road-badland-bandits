@@ -12,7 +12,5 @@ export const loadWeather = (city) => {
     .then((weatherArray) => {
         apiWeather = weatherArray
         return weatherArray;
-    })
-   
+    });
 }
-
