@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+}
+
+nav img {
+    width: 7em;
+    height: auto;
+
+	
+}
+
+h1 {
+
+}
+
+nav {
+    background-color: #3CAEA3;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2em;
+}
+
+.nav_item {
+ 
+
+}
+
+#park_options {
+
+}
+
+#biz_options {
+
+}
+
+#eat_options {
+
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: wrap-reverse;
+
+    
+
+}
+
+
+
+aside {
+    width: 20%;
+    height: 20em;   
+    background-color: #20639B;
+}
+
+.container {
+
+
+}
+
+#park_preview {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #F6D55C;
+    color: black;
+    width: 60%;
+    height: 50%;
+    margin: 2em;
+    padding: 5em;
+}
+
+.container_details {
+    
+}
+
+.bizarreries_preview{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #F6D55C;
+    color: black;
+    width: 60%;
+    height: 50%;
+    margin: 2em;
+    padding: 5em;
+}
+
+.eateries_preview {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #F6D55C;
+    color: black;
+    width: 60%;
+    height: 50%;
+    margin: 2em ;
+    padding: 5em;
+}
+
+.save {
+
+}
+
+.save_preview {
+
+}
+
+.itinerary {
+    display: flex;
+    
+    align-content: flex-end;
+    background-color: #20639B;
+
+
+}
+
+#saved_itinerary {
+
+}
+
+footer {
+    background-color: #3CAEA3;
+    color: black;
+    padding: 2em;
+}
