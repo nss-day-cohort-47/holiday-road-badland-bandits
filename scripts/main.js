@@ -3,6 +3,7 @@ import {parkList, parkPreviewList} from "./parks/ParkList.js"
 import {loadParks, useParks} from "./parks/ParkProvider.js"
 import {loadWeather, useWeather} from "./weather/WeatherProvider.js"
 import {weatherCard} from "./weather/WeatherCard.js"
+import {loadEatery} from "./eateries/EateryProvider.js"
 // import { park } from "./parks/Park.js"
 
 
@@ -42,3 +43,4 @@ loadParks().then(() => {
     parkList(foundParks);
 })
 
+loadEatery();
