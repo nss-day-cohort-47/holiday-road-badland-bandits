@@ -1,4 +1,4 @@
-import { loadWeather } from "./WeatherProvider.js"
+
 
 // export const weatherCard = (weatherObj) => {
 //     console.log(weatherObj);

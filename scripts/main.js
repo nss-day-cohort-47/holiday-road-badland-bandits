@@ -51,10 +51,10 @@ weatherElement.addEventListener("change", event => {
 
 const parkElement = document.querySelector("nav")
 parkElement.addEventListener("change", event => {
-    console.log("hello")
     console.log(event.target.value)
     if (event.target.id === "park_options") {
-       const singlePark = displayPark(event.target.value)
+        const singlePark = displayPark(event.target.value)
+        console.log("hello", singlePark)
         parkPreviewList(singlePark)
     }
 })
