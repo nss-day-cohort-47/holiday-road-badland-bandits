@@ -2,7 +2,7 @@
 
 export const eateryDropdown = (eatObj) => {
 
-    return ` <option value="${eatObj.businessName}">${eatObj.businessName}</option>
+    return ` <option value="${eatObj.id}">${eatObj.businessName}</option>
 `
 }
 

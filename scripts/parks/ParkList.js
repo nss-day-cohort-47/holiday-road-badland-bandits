@@ -2,7 +2,7 @@ import {park} from "./Park.js";
 import { parkDropdown } from "./ParkDropdown.js";
 
 export const parkList= (parkArray) => {
-render(parkArray)
+  render(parkArray)
 };
 
 export const parkPreviewList = (previewArray) => {

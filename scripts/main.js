@@ -6,7 +6,7 @@ import {weatherCard} from "./weather/WeatherCard.js"
 import {useAttractions, loadAttractions} from "./attractions/AttractionProvider.js"
 import {attractionList} from "./attractions/AttractionList.js"
 import {useEatery, loadEatery} from "./eateries/EateryProvider.js"
-
+import {eateryCard} from "./eateries/Eatery.js"
 import {eateryList} from "./eateries/EateryList.js"
 // import { park } from "./parks/Park.js"
 
@@ -28,7 +28,7 @@ const navElement = document.querySelector("nav")
 navElement.addEventListener("change", event => {
     if (event.target.id === "park_options") {
         const singlePark = displayPark(event.target.value)
-        console.log("show me this national park")
+        
 		parkPreviewList(singlePark)
         loadWeather(singlePark.map(weatherObj =>{
             return weatherObj.addresses[0].city;
@@ -48,6 +48,40 @@ previewElement.addEventListener("click", event => {
         console.log("park details")
     }
 })
+//--------------------------- eatery code-------------------- //
+
+const displayEatery = (eateryId) => {
+    console.log(eateryId, useEatery() )
+    const eatDisplayArray = []
+    useEatery().find((singleEatery) => {
+        if (singleEatery.id === (eateryId)){
+            eatDisplayArray.push(singleEatery);
+        }
+    })
+    return eatDisplayArray;
+}
+
+
+
+// navElement.addEventListener("change", event => {
+//     if (event.target.id === "eatery_options") {
+//         const singleEatery = displayEatery(event.target.value)
+//         console.log("show me this eatery")
+// 		eateryPreviewList(singleEatery)
+//     }});
+const dropdownElement = document.querySelector("#eateries_preview");
+
+dropdownElement.addEventListener("change", event => {
+    if (event.target.id === "eatery_options") {
+        const eaterySelector = event.target.value
+        console.log(`user wants to pick ${eaterySelector}`)
+        eateryCard(eaterySelector)
+    }
+})
+        
+       
+// ------------------------- end of eatery code---------------//
+
 
 loadParks().then(() => {
     const foundParks = useParks();
@@ -62,6 +96,6 @@ loadAttractions().then(()=>{
 })
 loadEatery().then(()=>{
     const foundEateries = useEatery();
-    console.log(foundEateries);
     eateryList(foundEateries);
-})
+});
+ 

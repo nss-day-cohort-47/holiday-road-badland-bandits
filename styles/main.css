@@ -9,10 +9,6 @@ nav img {
 	
 }
 
-h1 {
-
-}
-
 nav {
     background-color: #3CAEA3;
     color: black;
@@ -22,8 +18,7 @@ nav {
     padding: 2em;
 }
 
-.nav_item {
- 
+/* .nav_item {
 
 }
 
@@ -37,7 +32,7 @@ nav {
 
 #eat_options {
 
-}
+} */
 
 main {
     display: flex;
@@ -74,9 +69,9 @@ aside {
     padding: 5em;
 }
 
-.container_details {
+/* .container_details {
     
-}
+} */
 
 .bizarreries_preview{
     display: flex;
@@ -98,30 +93,32 @@ aside {
     color: black;
     width: 60%;
     height: 50%;
-    margin: 2em ;
+    /* margin: 2em ; */
     padding: 5em;
+    
 }
 
-.save {
+/* .save {
 
 }
 
 .save_preview {
 
-}
+} */
 
 .itinerary {
     display: flex;
     
     align-content: flex-end;
     background-color: #20639B;
+    margin-bottom: 100%;
 
 
 }
 
-#saved_itinerary {
+/* #saved_itinerary {
 
-}
+} */
 
 footer {
     background-color: #3CAEA3;
