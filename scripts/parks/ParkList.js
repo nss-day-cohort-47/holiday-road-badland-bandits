@@ -1,5 +1,6 @@
-import {park} from "./Park.js";
+import { park, parkDetailsHTML } from "./Park.js";
 import { parkDropdown } from "./ParkDropdown.js";
+
 
 export const parkList= (parkArray) => {
   render(parkArray)
@@ -9,6 +10,9 @@ export const parkPreviewList = (previewArray) => {
     previewRender(previewArray)
 };
  
+export const parkPreviewDetails = (parkDetailsArray) => {
+    parkPreviewRender(parkDetailsArray)
+};
 
  const render = (parkData) => {
     const parkDisplay = document.querySelector("#park_options");
@@ -21,10 +25,16 @@ export const parkPreviewList = (previewArray) => {
 
 const previewRender = (parkData) => {
         const parkDisplay = document.querySelector("#park_preview");
-        let HTMLArray = parkData.map(parkNames => {
-            return park(parkNames);
-    
-        })
-        parkDisplay.innerHTML = HTMLArray.join("");
+        
+        const singleParkHTML = park(parkData);
+        parkDisplay.innerHTML = singleParkHTML;
     };
     
+    
+const parkPreviewRender = (parkData) => {
+    const parkDisplay = document.querySelector("#park_preview--details");
+    const singleParkHTML = parkDetailsHTML(parkData);
+    parkDisplay.innerHTML = singleParkHTML;
+
+
+};
