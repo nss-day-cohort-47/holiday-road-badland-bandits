@@ -6,7 +6,7 @@ import {useAttractions, loadAttractions} from "./attractions/AttractionProvider.
 import {attractionList, attractionName} from "./attractions/AttractionList.js"
 import {useEatery, loadEatery} from "./eateries/EateryProvider.js"
 import {eateryList, eateryName} from "./eateries/EateryList.js"
-// import {eateryDetailsHTML} from "./eateries/Eatery.js"
+
 
 
 
@@ -88,10 +88,12 @@ eatElement.addEventListener("change", event => {
 })
 
 
-function myFunction() {
-  document.getElementById("eateryPanel").style.display = "block";
-}
+// function myFunction() {
+//   document.getElementById("eateryPanel").style.display = "block";
+// }
 
+ 
+  
        
 // ------------------------- End of Eatery code-------------------//
 
@@ -114,4 +116,4 @@ loadEatery().then(()=>{
     eateryList(foundEateries);
 });
  
-myFunction();
+// myFunction();

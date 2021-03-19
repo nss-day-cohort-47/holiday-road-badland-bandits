@@ -6,7 +6,6 @@ export const Eatery = (eateryObj) => {
      </section>
      <section id="eatery_preview--details">
      <div id="eateryPanel"></div>
-     <p class="flip" onclick="myFunction()">Details</p>
     <h3>Eatery Name: ${eateryObj.businessName}</h3>
     <div>Description: ${eateryObj.description}</div>
      <div>City: ${eateryObj.city}</div>
