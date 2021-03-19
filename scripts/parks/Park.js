@@ -1,4 +1,5 @@
 export const park = (parkObj) => {
+    console.log("parkObj", parkObj)
     return `<section class = "park_preview">You Selected This National Park:
     <h3>${parkObj.fullName}</h3>
     <div id="weather"></div>
