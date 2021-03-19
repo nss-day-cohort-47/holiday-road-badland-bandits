@@ -1,5 +1,4 @@
 export const Weather = (weatherObj) => {
-   console.log(weatherObj)
     return `  
     <div class="weather_card">
     <p class="date">${weatherObj.dt_txt}</p>

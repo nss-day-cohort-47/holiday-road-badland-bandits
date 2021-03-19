@@ -17,7 +17,6 @@ import {eateryList, eateryName} from "./eateries/EateryList.js"
 
 
 const displayPark = (parkId) => {
-    console.log(parkId, useParks() )
     const selectedPark = useParks().find(singlePark => {
         return singlePark.id === (parkId)
     })
@@ -35,12 +34,9 @@ navElement.addEventListener("change", event => {
 
 const previewElement = document.querySelector("#park_preview")
 previewElement.addEventListener("click", event => {
-    // console.log("btn clicked ", event)
     if(event.target.id.startsWith("container_details--park")) {
         const parkId = event.target.id.split("__")[1]
-        // console.log("park id", parkId);
         const singleParkDetails = displayPark(parkId)
-        // console.log(singleParkDetails)
         parkPreviewDetails(singleParkDetails)
     }
 })
@@ -48,41 +44,25 @@ previewElement.addEventListener("click", event => {
 // -----------------Start of Attractions code----------------//
 
 const displayAttraction = (bizName) => {
-    // console.log(bizName, useAttractions() )
     const displayArray = []
     useAttractions().find((singleAttraction) => {
         if (singleAttraction.name === (bizName)){
             displayArray.push(singleAttraction);
         }
     })
-    console.log("display", displayPark)
     return displayArray;
 }
 
-// const displayWeather = (cityId) => {
-//     // console.log(cityId, useWeather())
-//     const displayArray = []
-//     parkWeather = useWeather().find((singleCity) => {
-//         console.log("singleCity", singleCity)
-//         console.log("cityId", cityId)
-//         displayArray.push(singleCity);
-//         // if (singleCity.id === (cityId)){
-//         // }
-//     })
-//     // console.log(displayArray)
-//     return displayArray;
-// }
+
 
 const showWeather = (singlePark) => {
     loadParks().then(() => {
         let parks = useParks()
         let foundPark = parks.find(park => park.id === singlePark.id)
-        console.log(park.id, singlePark)
         
         loadWeather(foundPark)
         .then(() => {
             let weather = useWeather()
-            console.log(weather)
             weatherList(weather)
         })
     })
@@ -93,10 +73,8 @@ const showWeather = (singlePark) => {
 
 const parkElement = document.querySelector("nav")
 parkElement.addEventListener("change", event => {
-    console.log(event.target.value)
     if (event.target.id === "park_options") {
         const singlePark = displayPark(event.target.value)
-        console.log("hello", singlePark)
         parkPreviewList(singlePark)
         showWeather(singlePark);
     }
@@ -107,7 +85,6 @@ attractionElement.addEventListener("change", event =>{
     if (event.target.id === "biz_options") {
         const singleAttraction = displayAttraction(event.target.value)
         attractionName(singleAttraction)
-        // console.log(singleAttraction)
     }
 })
 
@@ -118,7 +95,6 @@ attractionElement.addEventListener("change", event =>{
 //--------------------Start of Eatery code----------------------- //
 
 const displayEatery = (eateryName) => {
-    // console.log(eateryName, useEatery() )
     const displayArray = []
     useEatery().find((singleEatery) => {
         if (singleEatery.businessName=== (eateryName)){
@@ -149,14 +125,8 @@ loadParks().then(() => {
     parkList(foundParks);
 })
 
-// loadWeather().then(() => {
-//     const foundWeather = useWeather();
-//     console.log(foundWeather);
-//     weatherList(foundWeather);
-// 
 loadAttractions().then(()=>{
     const foundAttractions = useAttractions();
-    // console.log(foundAttractions);
     attractionList(foundAttractions);
 })
 
