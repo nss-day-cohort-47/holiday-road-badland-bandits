@@ -6,6 +6,7 @@ import {useAttractions, loadAttractions} from "./attractions/AttractionProvider.
 import {attractionList, attractionName} from "./attractions/AttractionList.js"
 import {useEatery, loadEatery} from "./eateries/EateryProvider.js"
 import {eateryList, eateryName} from "./eateries/EateryList.js"
+// import {eateryDetailsHTML} from "./eateries/Eatery.js"
 
 
 
@@ -68,7 +69,7 @@ attractionElement.addEventListener("change", event =>{
 //--------------------Start of Eatery code----------------------- //
 
 const displayEatery = (eateryName) => {
-    console.log(eateryName, useEatery() )
+    // console.log(eateryName, useEatery() )
     const displayArray = []
     useEatery().find((singleEatery) => {
         if (singleEatery.businessName=== (eateryName)){
@@ -85,6 +86,23 @@ eatElement.addEventListener("change", event => {
         eateryName(singleEatery)
     }
 })
+
+// const eateryPreviewElement = document.querySelector(".eateries_preview")
+// eateryPreviewElement.addEventListener("click", event => {
+// if(event.target.id === "container_details--eatery") {
+// const singleEateryDetails = displayEatery(event.target.value)
+// eateryDetailsHTML(singleEateryDetails)
+
+// }
+// })
+    
+//     {
+//         const eateryId = event.target.id.split("__")[4]
+//         const singleEateryDetails = displayEatery(eateryId)
+//         console.log(singleEateryDetails)
+//         eateryPreviewDetails(singleEateryDetails)
+//     }
+// })
         
        
 // ------------------------- End of Eatery code-------------------//

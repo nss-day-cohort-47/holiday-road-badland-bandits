@@ -19,3 +19,24 @@ export const eateryName= (list) => {
     }
 
 
+
+    // export const eateryPreviewDetails= (list) => {
+    //     let eateryHTML= "";
+    //     const eateryDisplay = document.querySelector("#eatery_preview--details");
+    //     for (const eateryObj of list) {
+    //         eateryHTML += eateryDetailsHTML(eateryObj) 
+    //         }
+    //         eateryDisplay.innerHTML = eateryHTML;
+    //     } 
+
+    // export const eateryPreviewDetails = (eateryDetailsArray) => {
+    //     eateryPreviewRender(eateryDetailsArray)
+    // };
+    
+    // const eateryPreviewRender = (eateryData) => {
+    //     const eateryDisplay = document.querySelector("#eatery_preview--details");
+    //     const singleEateryHTML = eateryDetailsHTML(eateryData);
+    //     eateryDisplay.innerHTML = singleEateryHTML;
+    
+    
+    // };
