@@ -5,13 +5,13 @@ export const weatherList = (weatherArray) => {
 }; 
 
 const renderWeather = (weatherData) => {
-    const weatherDisplay = document.querySelector(".weather");
+    const weatherDisplay = document.querySelector("#park_preview");
     let HTMLArray = weatherData.map(cityWeather => {
         return Weather(cityWeather);
 
     })
     console.log(weatherDisplay)
-    weatherDisplay.innerHTML = HTMLArray.join("");
+    weatherDisplay.innerHTML += HTMLArray.join("");
 
 }
 // window.onload = renderWeather

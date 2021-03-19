@@ -8,8 +8,8 @@ export const useWeather = () => {
 }
 
 export const loadWeather = (city) => {
-    console.log(city)
-    return fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city.addresses[0].postalCode}&appid=${settings.weatherKey}`)
+    console.log("city", city)
+    return fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city.addresses[0].postalCode},us&units=imperial&appid=${settings.weatherKey}`)
     .then(response => response.json())
     .then((weatherObj) => {
         console.log(weatherObj.list);

@@ -1,10 +1,10 @@
 import {parkList, parkPreviewList, parkPreviewDetails} from "./parks/ParkList.js"
 import {loadParks, useParks} from "./parks/ParkProvider.js"
 import {loadWeather, useWeather} from "./weather/WeatherProvider.js"
-// import {weatherCard} from "./weather/WeatherCard.js"
+
 import { weatherList } from "./weather/WeatherList.js"
 import { Weather } from "./weather/Weather.js"
-// import { park } from "./parks/Park.js"
+import { park } from "./parks/Park.js"
 
 import {useAttractions, loadAttractions} from "./attractions/AttractionProvider.js"
 import {attractionList, attractionName} from "./attractions/AttractionList.js"
@@ -72,20 +72,24 @@ const displayAttraction = (bizName) => {
 //     return displayArray;
 // }
 
-// const weatherElement = document.querySelector("nav")
-// weatherElement.addEventListener("change", event => {
-//     loadParks().then(() => {
-//         let parks = useParks()
-//         let foundPark = parks.find(park => park.fullName === event.target.value)
-//         console.log(foundPark)
+const weatherElement = document.querySelector("nav")
+weatherElement.addEventListener("change", event => {
+    loadParks().then(() => {
+        let parks = useParks()
+        let foundPark = parks.find(park => park.id === event.target.value)
+        console.log(foundPark)
         
-//         loadWeather(foundPark)
-//         .then(() => {
-//             let weather = useWeather()
-//             console.log(weather)
-//         })
-//     })
-// })
+        loadWeather(foundPark)
+        .then(() => {
+            let weather = useWeather()
+            console.log(weather)
+            weatherList(weather)
+        })
+    })
+})
+
+
+
 
 const parkElement = document.querySelector("nav")
 parkElement.addEventListener("change", event => {
