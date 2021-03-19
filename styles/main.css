@@ -84,6 +84,17 @@ aside {
     margin: 2em;
     padding: 5em;
 }
+#attraction_preview--details, .flip {
+    font-size: 16px;
+    padding: 10px;
+    text-align: center;
+    background-color: #F6D55C;
+    color: black;
+    margin: auto;
+  }
+  #attraction_preview--details {
+    display: none;
+  }
 
 .eateries_preview {
     display: flex;

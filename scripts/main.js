@@ -110,6 +110,7 @@ attractionElement.addEventListener("change", event =>{
     }
 })
 
+
 // -------------------End of Attractions code----------------//
 
 
