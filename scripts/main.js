@@ -87,23 +87,11 @@ eatElement.addEventListener("change", event => {
     }
 })
 
-// const eateryPreviewElement = document.querySelector(".eateries_preview")
-// eateryPreviewElement.addEventListener("click", event => {
-// if(event.target.id === "container_details--eatery") {
-// const singleEateryDetails = displayEatery(event.target.value)
-// eateryDetailsHTML(singleEateryDetails)
 
-// }
-// })
-    
-//     {
-//         const eateryId = event.target.id.split("__")[4]
-//         const singleEateryDetails = displayEatery(eateryId)
-//         console.log(singleEateryDetails)
-//         eateryPreviewDetails(singleEateryDetails)
-//     }
-// })
-        
+function myFunction() {
+  document.getElementById("eateryPanel").style.display = "block";
+}
+
        
 // ------------------------- End of Eatery code-------------------//
 
@@ -126,3 +114,4 @@ loadEatery().then(()=>{
     eateryList(foundEateries);
 });
  
+myFunction();
