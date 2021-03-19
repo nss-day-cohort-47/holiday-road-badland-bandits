@@ -1,4 +1,4 @@
-import { park, parkDetailsHTML } from "./Park.js";
+import { park, parkDetailsHTML, savedPark } from "./Park.js";
 import { parkDropdown } from "./ParkDropdown.js";
 
 
@@ -38,3 +38,41 @@ const parkPreviewRender = (parkData) => {
 
 
 };
+
+
+
+//............B.J.-save button test..........
+
+export const savedList = (savedPlacesArray) => {
+   savedParkDisplay(savedPlacesArray)
+}; 
+   
+    const savedParkDisplay = (savedData) => {
+        const savedDisplay = document.querySelector(".save");
+        const savedPlacesHtml = savedPark(savedData);
+        savedDisplay.innerHTML = savedPlacesHtml;
+    }
+
+
+//     const savedParkDisplay = (savedData) => {
+//         const savedDisplay =  document.querySelector(".save");
+//         let HTMLArray = savedData.map(names => {
+//             return savedPark(names);
+//     })
+//     savedDisplay.innerHTML = HTMLArray.join("");
+// };
+    
+    
+    
+    
+//     let savedHTML = "";
+// 		//Loop over the array of posts and for each one, invoke the Post component which returns HTML representation
+// 		for (const savedObject of savedPlaces) {
+// 			//what is a postObject? postObject is the object of the HTML representation--Post
+// 			savedHTML += savedPark(savedObject)
+// 		}
+// 		return savedHTML;
+	
+// }
+
+//............end save button test..................

@@ -11,7 +11,7 @@ import {attractionList, attractionName} from "./attractions/AttractionList.js"
 import {useEatery, loadEatery} from "./eateries/EateryProvider.js"
 import {eateryList, eateryName} from "./eateries/EateryList.js"
 
-
+import {createSavedItinerary} from "./parks/Itinerary.js"
 
 
 
@@ -117,8 +117,40 @@ eatElement.addEventListener("change", event => {
        
 // ------------------------- End of Eatery code-------------------//
 
+//...........B.J. saved button testing............
+import {savedList} from "./parks/ParkList.js"
+const showSavedItinerary = () => {
+    const savedElement = document.querySelector("#saved_itinerary");
+      createSavedItinerary().then((savedItems) => {//when i get savedItems I can create the list
+          savedElement.innerHTML = savedList(savedItems); //create html representation and 
+      })
+  }
+
+  const saveElement = document.querySelector(".save")
+  saveElement.addEventListener("click", event => {
+      if(event.target.id === "save_button"){
+          console.log("save");
+          const park = document.querySelector("#park_preview").innerText
+          const attraction = document.querySelector(".bizarreries_preview").innerText
+          const eatery = document.querySelector(".eateries_preview").innerText
+          const savedObject = {
+              Park: park,
+              Attraction: attraction, 
+              Eatery: eatery
+          }
+          console.log("saved object", savedObject)
+          const savedData = createSavedItinerary(savedObject)
+          .then(response => {
+              console.log("what is the saved item", savedData);
+              showSavedItinerary();
+          })
+      }
+
+  })
 
 
+
+//.................end button testing...............
 
 loadParks().then(() => {
     const foundParks = useParks();
