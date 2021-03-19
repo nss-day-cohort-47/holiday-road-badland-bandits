@@ -1,7 +1,17 @@
-const render = (weatherData) => {
-    const weatherDisplay = document.querySelector("#weather");
-    // let HTMLArray = parkData.map(parkNames => {
-    //     return parkDropdown(parkNames);
+import { Weather } from "./Weather.js";
 
-    }
-    weatherDisplay.innerHTML = HTMLArray.join("");
+export const weatherList = (weatherArray) => {
+    renderWeather(weatherArray)
+}; 
+
+const renderWeather = (weatherData) => {
+    const weatherDisplay = document.querySelector("#park_preview");
+    let HTMLArray = weatherData.map(cityWeather => {
+        return Weather(cityWeather);
+
+    })
+    console.log(weatherDisplay)
+    weatherDisplay.innerHTML += HTMLArray.join("");
+
+}
+// window.onload = renderWeather

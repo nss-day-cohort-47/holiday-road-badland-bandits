@@ -2,15 +2,19 @@ import {settings} from "../Settings.js"
 
 let apiWeather = [];
 
+
 export const useWeather = () => {
     return [...apiWeather]
 }
 
 export const loadWeather = (city) => {
-    return fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${settings.weatherKey}`)
+    console.log("city", city)
+    return fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city.addresses[0].postalCode},us&units=imperial&appid=${settings.weatherKey}`)
     .then(response => response.json())
-    .then((weatherArray) => {
-        apiWeather = weatherArray
-        return weatherArray;
-    });
+    .then((weatherObj) => {
+        console.log(weatherObj.list);
+        apiWeather = weatherObj.list
+        return weatherObj.list;
+    })
+   
 }
