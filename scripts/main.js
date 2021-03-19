@@ -87,11 +87,6 @@ eatElement.addEventListener("change", event => {
     }
 })
 
-
-// function myFunction() {
-//   document.getElementById("eateryPanel").style.display = "block";
-// }
-
  
   
        
@@ -116,4 +111,3 @@ loadEatery().then(()=>{
     eateryList(foundEateries);
 });
  
-// myFunction();

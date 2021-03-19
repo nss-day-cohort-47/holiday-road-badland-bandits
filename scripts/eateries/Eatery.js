@@ -2,15 +2,14 @@ export const Eatery = (eateryObj) => {
   
     return `<section class = "eateries_preview">
      <h3>${eateryObj.businessName}</h3>
-     <button id="container_details--eatery__${eateryObj.id}">Eatery Details:</button>
+     <button id="container_details--eatery" class="flip" onclick="myFunction(), hideButton() ">Eatery Details:</button>
      </section>
      <section id="eatery_preview--details">
-     <div id="eateryPanel"></div>
-    <h3>Eatery Name: ${eateryObj.businessName}</h3>
-    <div>Description: ${eateryObj.description}</div>
-     <div>City: ${eateryObj.city}</div>
-    <div>State: ${eateryObj.state}</div>
-    <div>Ameneties: ${eateryObj.ameneties}</div>
+     <h3><b>Eatery Name</b>: ${eateryObj.businessName}</h3>
+    <div><b>Description</b>: ${eateryObj.description}</div>
+     <div><b>City</b>: ${eateryObj.city}</div>
+    <div><b>State</b>: ${eateryObj.state}</div>
+    <div><b>Ameneties Wifi</b>: ${eateryObj.ameneties.wifi}</div>
     </section>` 
 }
 

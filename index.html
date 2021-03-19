@@ -43,14 +43,15 @@
         </section>
         <section class="container">
             <div class="eateries_preview">
-                <button id="container_details--eatery">details</button>
-                <div id="eateryPanel"></div>
                 <script>
                 function myFunction() {
-                      document.getElementById("eateryPanel").style.display = "block";
+                      document.getElementById("eatery_preview--details").style.display = "block";
+                    }
+               function hideButton() {
+                        document.getElementById("container_details--eatery").style.display= "none";
                     }
                 </script>
-                     
+                     <button id="container_details--eatery">details</button>
             </div>
             <div id="eatery_preview--details"></div>
         </section>
@@ -69,5 +70,5 @@
     </footer>
     
 </body>
-< type="module" src="./scripts/main.js"></>
+<script type="module" src="./scripts/main.js"></script>
 </html>
