@@ -15,6 +15,7 @@ import {eateryList, eateryName} from "./eateries/EateryList.js"
 
 
 
+
 const displayPark = (parkId) => {
     console.log(parkId, useParks() )
     const selectedPark = useParks().find(singlePark => {
@@ -117,7 +118,7 @@ attractionElement.addEventListener("change", event =>{
 //--------------------Start of Eatery code----------------------- //
 
 const displayEatery = (eateryName) => {
-    console.log(eateryName, useEatery() )
+    // console.log(eateryName, useEatery() )
     const displayArray = []
     useEatery().find((singleEatery) => {
         if (singleEatery.businessName=== (eateryName)){
@@ -134,7 +135,9 @@ eatElement.addEventListener("change", event => {
         eateryName(singleEatery)
     }
 })
-        
+
+ 
+  
        
 // ------------------------- End of Eatery code-------------------//
 

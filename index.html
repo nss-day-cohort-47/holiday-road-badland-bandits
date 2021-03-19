@@ -53,8 +53,17 @@
         </section>
         <section class="container">
             <div class="eateries_preview">
-                <button class="container_details__eatery">details</button>
+                <script>
+                function myFunction() {
+                      document.getElementById("eatery_preview--details").style.display = "block";
+                    }
+               function hideButton() {
+                        document.getElementById("container_details--eatery").style.display= "none";
+                    }
+                </script>
+                     <button id="container_details--eatery">details</button>
             </div>
+            <div id="eatery_preview--details"></div>
         </section>
         <section class="container">
             <div class="save">
