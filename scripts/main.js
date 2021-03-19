@@ -13,10 +13,11 @@ const displayPark = (parkId) => {
     // console.log(parkId, useParks() )
     const displayArray = []
     useParks().find((singlePark) => {
-        if (singlePark.id === (parkId)){
+        if (singlePark.id === parkId){
             displayArray.push(singlePark);
         }
     })
+    console.log("display", displayPark)
     return displayArray;
 }
 
