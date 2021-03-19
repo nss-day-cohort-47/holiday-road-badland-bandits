@@ -2,7 +2,7 @@ export const attraction = (attractionobj) => {
     // console.log(attractionobj)
     return `<section class = "bizarreries_preview">
     <h3>${attractionobj.name}</h3>
-    <button id= "container_details--bizarre" class="flip" onclick="showDetails()">Attraction Details:</button>
+    <button id= "container_details--bizarre" class="flip" onclick="showDetails(), hideButton()">Attraction Details:</button>
     </section>
     <section id="attraction_preview--details">
     <h3><b>Attraction Name:</b> ${attractionobj.name}</h3>
