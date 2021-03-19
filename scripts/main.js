@@ -73,12 +73,11 @@ const displayAttraction = (bizName) => {
 //     return displayArray;
 // }
 
-const weatherElement = document.querySelector("nav")
-weatherElement.addEventListener("change", event => {
+const showWeather = (singlePark) => {
     loadParks().then(() => {
         let parks = useParks()
-        let foundPark = parks.find(park => park.id === event.target.value)
-        console.log(foundPark)
+        let foundPark = parks.find(park => park.id === singlePark.id)
+        console.log(park.id, singlePark)
         
         loadWeather(foundPark)
         .then(() => {
@@ -87,7 +86,7 @@ weatherElement.addEventListener("change", event => {
             weatherList(weather)
         })
     })
-})
+}
 
 
 
@@ -99,27 +98,10 @@ parkElement.addEventListener("change", event => {
         const singlePark = displayPark(event.target.value)
         console.log("hello", singlePark)
         parkPreviewList(singlePark)
+        showWeather(singlePark);
     }
 })
-//         loadWeather(singlePark.map(weatherObj =>{
-//             console.log(weatherObj)
-//             return weatherObj;
-//         })).then(weather =>{
-//             // console.log(weather);
-//             Weather(weather);
-//             loadParks().then(() => {
-//                 const singleCity = useParks()
-//                 console.log(singleCity)
-//             })
-            
-//             // console.log(displayWeather)
-//             console.log("show me the weather for this park", singleCity)
-//             weatherList(singleCity)
-//         });
 
-// 	} 
-        
-// })
 const attractionElement = document.querySelector("nav")
 attractionElement.addEventListener("change", event =>{
     if (event.target.id === "biz_options") {
