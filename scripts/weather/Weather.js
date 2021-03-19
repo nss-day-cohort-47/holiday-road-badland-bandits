@@ -1,1 +1,0 @@
-// when writing weather function..needs parameter of postal code

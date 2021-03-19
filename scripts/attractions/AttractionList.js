@@ -1,4 +1,3 @@
-
 import { attractionDropdown } from "./AttractionDropdown.js";
 import {attraction} from "./Attraction.js"
 
