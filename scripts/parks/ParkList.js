@@ -32,7 +32,7 @@ const previewRender = (parkData) => {
     
     
 const parkPreviewRender = (parkData) => {
-    const parkDisplay = document.querySelector("#park_preview--details");
+    const parkDisplay = document.querySelector("#park_preview");
     const singleParkHTML = parkDetailsHTML(parkData);
     parkDisplay.innerHTML = singleParkHTML;
 

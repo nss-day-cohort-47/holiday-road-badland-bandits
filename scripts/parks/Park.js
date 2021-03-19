@@ -8,11 +8,11 @@ export const park = (parkObj) => {
 
 export const parkDetailsHTML = (parkDetailsObj) => {
     return `<section id="park_preview--details">
-    <h3>Park Name: ${parkDetailsObj.fullName}</h3>
-    <div>Description: ${parkDetailsObj.description}</div>
-    <div>Url: ${parkDetailsObj.url}</div>
-    <div>Address: ${parkDetailsObj.addresses}</div>
-    <div>Weather: ${parkDetailsObj.weatherInfo}</div>
+    <h3><b>Park Name:</b> ${parkDetailsObj.fullName}</h3>
+    <div><b>Description:</b> ${parkDetailsObj.description}</div>
+    <div><b>Url:</b> ${parkDetailsObj.url}</div>
+    <div><b>State:</b> ${parkDetailsObj.states}</div>
+    <div><b>Weather:</b> ${parkDetailsObj.weatherInfo}</div>
     </section>`
 };
 
