@@ -47,7 +47,7 @@ main {
 
 
 aside {
-    width: 20%;
+    width: 100%;
     height: 20em;   
     background-color: #20639B;
 }
@@ -88,7 +88,6 @@ aside {
     font-size: 16px;
     padding: 10px;
     text-align: center;
-    background-color: #F6D55C;
     color: black;
     margin: auto;
   }
@@ -122,7 +121,7 @@ aside {
     
     align-content: flex-end;
     background-color: #20639B;
-    margin-bottom: 100%;
+    /* margin-bottom: 100%; */
 
 
 }
