@@ -10,7 +10,6 @@ const renderWeather = (weatherData) => {
         return Weather(cityWeather);
 
     })
-    console.log(weatherDisplay)
     weatherDisplay.innerHTML += HTMLArray.join("");
 
 }

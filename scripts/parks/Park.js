@@ -1,7 +1,6 @@
 export const park = (parkObj) => {
-    console.log("parkObj", parkObj)
     return `<section class = "park_preview">You Selected This National Park:
-    <h3>${parkObj.fullName}</h3>
+    <h3 class="parkName">${parkObj.fullName}</h3>
     <div id="weather"></div>
     <button id="container_details--park__${parkObj.id}">Park Details:</button>
     </section>`
@@ -16,6 +15,15 @@ export const parkDetailsHTML = (parkDetailsObj) => {
     <div><b>Weather:</b> ${parkDetailsObj.weatherInfo}</div>
     </section>`
 };
+
+export const savedPark = (savedObj) => {//exporting HTML to parkList to call in a for loop
+    return `
+        <aside id ="saved_itinerary">
+        <h3><b> Saved Itinerary: </b> ${savedObj.Park}</h3>
+        <div>Attraction:  ${savedObj.Attraction}</div>
+        <div>Eatery: ${savedObj.Eatery}</div>
+        </section>`
+}
 
 
 //class="isHidden"-css- hide and show elements with css display none using classes

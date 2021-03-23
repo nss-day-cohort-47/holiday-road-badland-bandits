@@ -17,7 +17,6 @@ export const attractionName = (list) => {
 let attractionHTML = ""; 
 const attractionDisplay = document.querySelector(".bizarreries_preview");
 for (const attractionobj of list) { 
-attractionHTML += attraction(attractionobj)
-console.log(attractionHTML) }
+attractionHTML += attraction(attractionobj) }
 attractionDisplay.innerHTML = attractionHTML;
 }
